@@ -12,14 +12,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
-          # Enable debug mode
-          debug: true
 
       - name: Create S3 Bucket with Website Configuration
         run: |
@@ -63,4 +61,4 @@ jobs:
 
       - name: Deploy static site to S3 bucket
         run: |
-          aws s3 sync ./public/ s3://primuslearning-github-actions-website --delete
+          aws s3 sync ./public/ s3://tee-github-actions-website --delete
