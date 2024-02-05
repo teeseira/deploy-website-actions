@@ -33,7 +33,6 @@ The workflow is defined in `.github/workflows/s3bucket.yml`. It consists of the 
 
     ![bucket](/assets/bucket.png)
 
-
     - Note: Another way to check that the S3 bucket has been created is to configure AWS CLI with the necessary credentials and then verify the creation:
 
     ```
