@@ -26,4 +26,4 @@ function processData(csv) {
     
     let elout = document.getElementById("output");
     elout.insertAdjacentHTML('beforeend', elGenerate);
-}
+} 
